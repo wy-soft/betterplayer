@@ -76,8 +76,7 @@ class BetterPlayerControlsConfiguration {
   final Duration controlsHideTime;
 
   ///Parameter used to build custom controls
-  final Widget Function(BetterPlayerController controller,
-      Function(bool) onPlayerVisibilityChanged)? customControlsBuilder;
+  final Widget Function(BetterPlayerController controller, Function(bool) onPlayerVisibilityChanged)? customControlsBuilder;
 
   ///Parameter used to change theme of the player
   final BetterPlayerTheme? playerTheme;
@@ -240,8 +239,8 @@ class BetterPlayerControlsConfiguration {
   ///Setup BetterPlayerControlsConfiguration based on Theme options.
   factory BetterPlayerControlsConfiguration.theme(ThemeData theme) {
     return BetterPlayerControlsConfiguration(
-      textColor: theme.textTheme.bodyText1?.color ?? Colors.white,
-      iconsColor: theme.textTheme.button?.color ?? Colors.white,
+      textColor: theme.textTheme.bodyLarge?.color ?? Colors.white,
+      iconsColor: theme.textTheme.labelLarge?.color ?? Colors.white,
     );
   }
 }
